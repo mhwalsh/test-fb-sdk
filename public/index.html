@@ -22,6 +22,7 @@
         }else {
           FB.login();
         }
+        FB.setIsAuthorised(true);
       });
     };
 
@@ -33,5 +34,11 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
     </script>
+    <script type="text/javascript" src="script.js"></script>
+    <div id="main" class="container">
+      <button type="button" name="button" onclick="getMe()">Get Me</button>
+      <button type="button" name="button" onclick="getMyFeed()">Get My Feed</button>
+      <button type="button" name="button" onclick="getMyFeed()">Get My Friends</button>
+    </div>
   </body>
 </html>
