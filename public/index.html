@@ -21,7 +21,8 @@
           console.log('Logged in.');
         }else {
           console.log('log in else');
-          FB.login();
+          FB.login(function(response) {
+          }, {scope: 'user_friends'});
         }
         FB.setIsAuthorised(true);
       });
@@ -40,6 +41,8 @@
       <button type="button" name="button" onclick="getMe()">Get Me</button>
       <button type="button" name="button" onclick="getMyFeed()">Get My Feed</button>
       <button type="button" name="button" onclick="getMyFeed()">Get My Friends</button>
+      <button type="button" name="button" onclick="getPermissions()">Permissions</button>
+
     </div>
   </body>
 </html>

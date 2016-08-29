@@ -6,6 +6,16 @@ var getMe = function() {
   });
 };
 
+var getPermissions = function() {
+  FB.api('/me/permissions', function(response) {
+    if (!response || response.error) {
+      console.log(response.error);
+    } else {
+      console.log(response);
+    }
+  });
+};
+
 var getMyFeed = function(){
   FB.api('/me/feed', function(response) {
     if (!response || response.error) {
