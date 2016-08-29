@@ -12,6 +12,5 @@ app.get('/', function(req, res) {
 });
 
 app.listen(3000, function() {
-  console.log('test app key = ', process.env.APP_KEY);
   console.log('listening on port 3000');
 });
